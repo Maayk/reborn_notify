@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "Roboto";
+    src: url( "Roboto.ttf" );
+}
+
+body{
+    overflow: hidden;
+    font-family: "Roboto";
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 0 28.5%;
+  }
+  .notify-container{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom: 2vh;
+    width: 80vh;
+  
+  }
+  .achievement-container {
+    position: relative;
+    transition: width 0.5s 1s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0 auto;
+    width: 50px;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  .achievement-container.active {
+    width: 250px;
+  }
+  .achievement-container.active .achievement-message {
+    width: 250px;
+  }
+  .achievement-container.active .message {
+    opacity: 1;
+  }
+  .achievement-container.active .message:first-child {
+    margin-top: -50px;
+  }
+  .achievement {
+    height: 50px;
+  }
+  .ball {
+    transition: all 0.2s ease;
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    transform: scale(0) translateZ(0);
+    text-align: center;
+  }
+  .ball.one,
+  .ball.three {
+    background: #125bf8;
+  }
+  .ball.two,
+  .ball.four {
+    background: #125bf8;
+  }
+  .ball.one,
+  .ball.two,
+  .ball.three,
+  .ball.four {
+    transition-delay: 2s;
+  }
+  .ball.active {
+    transform: scale(1) translateZ(0);
+  }
+  .ball.active.two {
+    transition-delay: 0.1s;
+  }
+  .ball.active.three {
+    transition-delay: 0.2s;
+  }
+  .ball.active.four {
+    transition-delay: 0.3s;
+  }
+
+  .fa-trophy {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-check {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-times {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-exclamation {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-smile-wink {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-tired {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-heartbeat {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+  .fa-location-arrow {
+    transform: all 0.5s 2s ease;
+    margin-top: 1vh;
+    line-height: 50px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+
+  .achievement-message {
+    box-sizing: border-box;
+    transition: all 0.5s 1s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background: #3e92ff7e;
+    color: #ffffff;
+    font-weight: 800;
+    overflow: hidden;
+  }
+
+  .sucesso {
+    background: #6fff93;
+  }
+
+  .achievement-message .message {
+    transition: margin-top 0.5s 2s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s 1s ease;
+    margin-top: 0;
+    opacity: 0;
+    line-height: 50px;
+    font-size: 14px;
+    padding-left: 55px;
+    overflow: hidden;
+    max-width: 180px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
