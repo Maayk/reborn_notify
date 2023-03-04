@@ -11,10 +11,10 @@ AddEventHandler('reborn:notify:send', function(ntitulo,nmensagem,ntipo,ntempo)
           gps = "fa-location-arrow",
      }
 	SendNUIMessage({
-          style = ntipo,
+	  style = ntipo,
 		titulo = ntitulo,
 		mensagem = nmensagem,
-          tipo = tipo[ntipo],
+		tipo = tipo[ntipo],
 		tempo = ntempo
 	})
 end)
